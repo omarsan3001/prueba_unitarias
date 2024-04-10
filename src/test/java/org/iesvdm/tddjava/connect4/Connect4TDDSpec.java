@@ -13,9 +13,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class Connect4TDDSpec {
-    /**
-     * pruebaaaaaa
-     */
     private Connect4TDD tested;
 
     private OutputStream output;
