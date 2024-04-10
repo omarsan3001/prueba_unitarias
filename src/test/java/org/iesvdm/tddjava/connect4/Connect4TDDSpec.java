@@ -9,8 +9,7 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class Connect4TDDSpec {
@@ -33,7 +32,7 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenTheGameStartsTheBoardIsEmpty() {
-
+        assertEquals(tested.getNumberOfDiscs(),0);
     }
 
     /*
@@ -44,21 +43,18 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenDiscOutsideBoardThenRuntimeException() {
-
-
+        assertThrows(RuntimeException.class, () -> {tested.putDiscInColumn(8);});
     }
 
     @Test
     public void whenFirstDiscInsertedInColumnThenPositionIsZero() {
-
         assertThat(tested.putDiscInColumn(0)).isEqualTo(0);
 
     }
 
     @Test
     public void whenSecondDiscInsertedInColumnThenPositionIsOne() {
-
-
+        assertThat(tested.putDiscInColumn(1)).isEqualTo(1);
     }
 
     @Test
