@@ -97,12 +97,13 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenFirstPlayerPlaysThenDiscColorIsRed() {
-
+        assertThat(tested.getCurrentPlayer()).isEqualTo("R");
     }
 
     @Test
     public void whenSecondPlayerPlaysThenDiscColorIsGreen() {
-
+        tested.putDiscInColumn(0);
+        assertThat(tested.getCurrentPlayer()).isEqualTo("G");
     }
 
     /*
@@ -113,13 +114,15 @@ public class Connect4TDDSpec {
     @Test
     public void whenAskedForCurrentPlayerTheOutputNotice() {
 
-
+        assertThat(tested.getCurrentPlayer()).isEqualTo("R");
+        tested.putDiscInColumn(0);
+        assertThat(tested.getCurrentPlayer()).isEqualTo("G");
 
     }
 
     @Test
     public void whenADiscIsIntroducedTheBoardIsPrinted() {
-
+        assertThat(tested.putDiscInColumn(0)).isEqualTo(0);
     }
 
     /*
@@ -128,6 +131,9 @@ public class Connect4TDDSpec {
 
     @Test
     public void whenTheGameStartsItIsNotFinished() {
+
+        tested.putDiscInColumn(0);
+
 
     }
 
