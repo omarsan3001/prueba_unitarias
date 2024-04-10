@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="561063a2-7378-4c9d-bb45-d310103a949e" name="Changes" comment="añado git" />
+    <list default="true" id="561063a2-7378-4c9d-bb45-d310103a949e" name="Changes" comment="añado git">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/connect4/Connect4TDDSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/tddjava/connect4/Connect4TDDSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/connect4/Connect4TDDSpec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/iesvdm/tddjava/connect4/Connect4TDDSpec.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="omarsan3001 &lt;omarsan3001@g.educaand.es&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="feature_branch_test_connect4" />
@@ -91,7 +100,7 @@
       <recent name="C:\Users\usuario\IdeaProjects\bucles\bd_persons\test_person" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Connect4TDDSpec.whenDiscOutsideBoardThenRuntimeException">
+  <component name="RunManager" selected="JUnit.Connect4TDDSpec.whenDiscInsertedThenNumberOfDiscsIncreases">
     <configuration name="AssertTest.whenBooleanIsTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
@@ -140,6 +149,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Connect4TDDSpec.whenDiscInsertedThenNumberOfDiscsIncreases" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test_person" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesvdm.tddjava.connect4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.connect4" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.connect4.Connect4TDDSpec" />
+      <option name="METHOD_NAME" value="whenDiscInsertedThenNumberOfDiscsIncreases" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Connect4TDDSpec.whenDiscOutsideBoardThenRuntimeException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test_person" />
       <extension name="coverage">
@@ -156,36 +181,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Connect4TDDSpec.whenTheGameStartsTheBoardIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test_person" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesvdm.tddjava.connect4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.tddjava.connect4" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.tddjava.connect4.Connect4TDDSpec" />
-      <option name="METHOD_NAME" value="whenTheGameStartsTheBoardIsEmpty" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="JUnit.Connect4TDDSpec.whenDiscInsertedThenNumberOfDiscsIncreases" />
       <item itemvalue="JUnit.Connect4TDDSpec.whenDiscOutsideBoardThenRuntimeException" />
-      <item itemvalue="JUnit.Connect4TDDSpec.whenTheGameStartsTheBoardIsEmpty" />
       <item itemvalue="JUnit.AssertTest.whenBooleanIsTrue" />
       <item itemvalue="JUnit.Connect4TDDSpec.when4Diagonal1DiscsAreConnectedThenThatPlayerWins" />
       <item itemvalue="JUnit.Connect4TDDSpec.when4Diagonal2DiscsAreConnectedThenThatPlayerWins" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Connect4TDDSpec.whenDiscInsertedThenNumberOfDiscsIncreases" />
+        <item itemvalue="JUnit.Connect4TDDSpec.whenDiscOutsideBoardThenRuntimeException" />
         <item itemvalue="JUnit.Connect4TDDSpec.when4Diagonal2DiscsAreConnectedThenThatPlayerWins" />
         <item itemvalue="JUnit.Connect4TDDSpec.when4Diagonal1DiscsAreConnectedThenThatPlayerWins" />
         <item itemvalue="JUnit.AssertTest.whenBooleanIsTrue" />
-        <item itemvalue="JUnit.Connect4TDDSpec.whenTheGameStartsTheBoardIsEmpty" />
-        <item itemvalue="JUnit.Connect4TDDSpec.whenDiscOutsideBoardThenRuntimeException" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712739014268</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="añado git">
+      <option name="closed" value="true" />
+      <created>1712739604418</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712739604418</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

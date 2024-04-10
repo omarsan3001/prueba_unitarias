@@ -43,23 +43,37 @@ public class Connect4TDDSpec {
     @Test
     public void whenDiscOutsideBoardThenRuntimeException() {
         assertThrows(RuntimeException.class, () -> {tested.putDiscInColumn(8);});
+        assertThrows(RuntimeException.class, () -> {tested.putDiscInColumn(-1);});
+        assertThrows(RuntimeException.class, () -> {
+            for (int i = 0; i <= 7; i++) {
+                tested.putDiscInColumn(6);
+            }
+        });
     }
 
     @Test
     public void whenFirstDiscInsertedInColumnThenPositionIsZero() {
-        assertThat(tested.putDiscInColumn(0)).isEqualTo(0);
+        for (int i = 0; i < 7; i++) {
+            assertThat(tested.putDiscInColumn(i)).isEqualTo(0);
+        }
+
 
     }
 
     @Test
     public void whenSecondDiscInsertedInColumnThenPositionIsOne() {
-        assertThat(tested.putDiscInColumn(1)).isEqualTo(1);
+        for (int i = 0; i < 7; i++) {
+            tested.putDiscInColumn(i);
+            assertThat(tested.putDiscInColumn(i)).isEqualTo(1);
+        }
     }
 
     @Test
     public void whenDiscInsertedThenNumberOfDiscsIncreases() {
 
-
+        assertEquals(tested.getNumberOfDiscs(),0);
+        tested.putDiscInColumn(0);
+        assertEquals(tested.getNumberOfDiscs(),1);
 
     }
 
