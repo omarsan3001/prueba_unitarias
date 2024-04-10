@@ -80,7 +80,12 @@ public class Connect4TDDSpec {
     @Test
     public void whenNoMoreRoomInColumnThenRuntimeException() {
 
+        for (int i = 0; i < 6; i++) {
 
+            tested.putDiscInColumn(0);
+        }
+
+        assertThrows(RuntimeException.class, () -> {tested.putDiscInColumn(0);});
 
     }
 
