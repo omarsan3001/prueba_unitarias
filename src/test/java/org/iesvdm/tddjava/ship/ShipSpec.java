@@ -22,60 +22,66 @@ public class ShipSpec {
         obstacles.add(new Point(44, 44));
         obstacles.add(new Point(45, 46));
         planet = new Planet(max, obstacles);
-//        ship = new Ship(location);
         ship = new Ship(location, planet);
     }
 
     public void whenInstantiatedThenLocationIsSet() {
-//        Location location = new Location(new Point(21, 13), Direction.NORTH);
-//        Ship ship = new Ship(location);
-
+        assertEquals(ship.getLocation(), location);
     }
 
-//    public void givenNorthWhenMoveForwardThenYDecreases() {
-//        ship.moveForward();
-//        assertEquals(ship.getLocation().getPoint().getY(), 12);
-//    }
-//
-//    public void givenEastWhenMoveForwardThenXIncreases() {
-//        ship.getLocation().setDirection(Direction.EAST);
-//        ship.moveForward();
-//        assertEquals(ship.getLocation().getPoint().getX(), 22);
-//    }
+    public void givenNorthWhenMoveForwardThenYDecreases() {
+        ship.moveForward();
+        assertEquals(ship.getLocation().getPoint().getY(), 12);
+    }
+
+    public void givenEastWhenMoveForwardThenXIncreases() {
+        ship.getLocation().setDirection(Direction.EAST);
+        ship.moveForward();
+        assertEquals(ship.getLocation().getPoint().getX(), 22);
+    }
 
     public void whenMoveForwardThenForward() {
-
+        ship.moveForward();
+        assertEquals(ship.getLocation().getPoint().getY(), 12);
     }
 
     public void whenMoveBackwardThenBackward() {
-
+        ship.moveBackward();
+        assertEquals(ship.getLocation().getPoint().getY(), 14);
     }
 
     public void whenTurnLeftThenLeft() {
-
+        ship.turnLeft();
+        assertEquals(ship.getLocation().getDirection(), Direction.WEST);
     }
 
     public void whenTurnRightThenRight() {
-
+        ship.turnRight();
+        assertEquals(ship.getLocation().getDirection(), Direction.EAST);
     }
 
     public void whenReceiveCommandsFThenForward() {
-
+        ship.receiveCommands("f");
+        assertEquals(ship.getLocation().getPoint().getY(), 12);
     }
 
     public void whenReceiveCommandsBThenBackward() {
+        ship.receiveCommands("b");
+        assertEquals(ship.getLocation().getPoint().getY(), 14);
     }
 
     public void whenReceiveCommandsLThenTurnLeft() {
-
+        ship.receiveCommands("l");
+        assertEquals(ship.getLocation().getDirection(), Direction.WEST);
     }
 
     public void whenReceiveCommandsRThenTurnRight() {
-
+        ship.receiveCommands("r");
+        assertEquals(ship.getLocation().getDirection(), Direction.EAST);
     }
 
     public void whenReceiveCommandsThenAllAreExecuted() {
-
+        assertEquals(ship.receiveCommands("fblr"),"OOOO");
     }
 
     public void whenInstantiatedThenPlanetIsStored() {
@@ -83,10 +89,17 @@ public class ShipSpec {
 //        Planet planet = new Planet(max);
 //        ship = new Ship(location, planet);
 
+        assertEquals(ship.getPlanet(), planet);
+
     }
 
     public void givenDirectionEAndXEqualsMaxXWhenReceiveCommandsFThenWrap() {
-
+        Point max = new Point(50, 50);
+        Planet planet = new Planet(max);
+        Location location = new Location(max, Direction.EAST);
+        ship = new Ship(location, planet);
+        ship.receiveCommands("f");
+        assertEquals(ship.getLocation().getPoint().getX(), 1);
     }
 
     public void givenDirectionEAndXEquals1WhenReceiveCommandsBThenWrap() {
